@@ -1,6 +1,4 @@
-const apm = require('elastic-apm-node').start({
-  appName: 'search-service'
-});
+
 const app = require('express')();
 const elasticsearch = require('elasticsearch');
 const axios = require('axios');
@@ -100,7 +98,6 @@ app.use(function (req, res) {
 })
 
 // Any errors caught by express will be logged by apm agent 
-app.use(apm.middleware.express());
 
 app.listen(port, function() {
   console.log('Server is running on port:', port);
