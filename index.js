@@ -4,7 +4,7 @@ const elasticsearch = require('elasticsearch');
 const axios = require('axios');
 const bodyParser = require('body-parser');
 const client = new elasticsearch.Client({
-  host: 'localhost:9200'
+  host: 'ec2-13-57-231-79.us-west-1.compute.amazonaws.com'
 });
 const port = process.env.PORT || 3000;
 
